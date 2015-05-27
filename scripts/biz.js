@@ -16,3 +16,7 @@ angular.module("xs", [])
             }
         }
     }]);
+
+angular.module("xs", [])
+    .controller('/loginCtrl',[''])
+

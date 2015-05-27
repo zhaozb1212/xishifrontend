@@ -257,3 +257,72 @@ body {
     color: #fff;
 }
 
+/*login begin*/
+.xs-header-helper {
+    display: block;
+    color: #fff;
+    padding: 0 10px 0 0;
+}
+
+.logreg-form {
+    margin: 10px;
+}
+
+.logreg-inputs {
+    margin: 0 -10px;
+    padding: 10px 10px 0;
+    border-top: 10px #ddd;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+}
+
+.input-group {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+input.ui-input, .input-group .ui-input {
+    display: block;
+    margin-bottom: 0;
+    width: 100%;
+    padding: 8px 4px;
+    background: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    font-size: 1rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.input-group.ui-error .input-tip {
+    max-height: 10em;
+    min-height: 1.8em;
+}
+
+button {
+    text-transform: none;
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+    line-height: normal;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.ui-btn {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    background: #3199e8;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    -webkit-transition: color .4s;
+    transition: color .4s;
+}
+
+/*login end*/
+

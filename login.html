@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="xs" ng-class="{'body-white':1}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <title>夕食餐厅</title>
+    <link rel="stylesheet" href="style/reset.css"/>
+    <link rel="stylesheet" href="style/css.css"/>
+</head>
+<body ng-controller="rootCtrl">
+<div ng-view>
+    <header class="xs-header">
+        <a class="xs-header-back"><span></span>返回</a>
+
+        <div class="xs-header-title flex">
+            <span class="header-rst-name">夕食餐厅</span>
+        </div>
+        <a class="xs-header-helper">注册</a>
+    </header>
+    <form class="logreg-form ng-pristine ng-scope ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength"
+          name="loginform" novalidate>
+        <div class="logreg-inputs">
+            <div class="input-group"
+                 ng-class="{'ui_error': loginform.username.$invalid &amp;&amp; loginform.username.$dirty &amp;&amp; invalidusername}">
+                <input class="ui-input ng-pristine ng-valid ng-valid-required ng-touched" type="text"
+                       ng-model="user.username" name="username" placeholder="手机/用户名/电子邮箱" ng-blur="message('username')"
+                       required="" auto-fill-sync="">
+
+                <p class="input-tip">请输入手机或用户名或电子邮箱</p></div>
+            <div class="input-group"
+                 ng-class="{'ui_error': loginform.password.$invalid &amp;&amp; loginform.password.$dirty &amp;&amp; invalidpassword}">
+                <input class="ui-input ng-pristine ng-invalid ng-invalid-required ng-touched" type="password"
+                       ng-model="user.password" name="password" placeholder="密码" required=""
+                       ng-blur="message('password')" auto-fill-sync="">
+
+                <p class="input-tip">请输入密码</p></div>
+            <!--<div class="input-group captcha-group"
+                 ng-class="{'ui_error': loginform.captcha.$invalid &amp;&amp; loginform.captcha.$dirty &amp;&amp; invalidcaptcha}">
+                <input class="ui-input captcha-input ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength"
+                       type="text" placeholder="验证码" autocomplete="off" ng-model="user.captcha_code" name="captcha"
+                       required="" maxlength="4" ng-minlength="4" ng-blur="message('captcha')"> <img
+                    class="captcha-image" alt="验证码" title="请输入验证码" ng-click="refreshCode()"
+                    ng-src="/restapi/v1/captchas/0905d3fc87c54925057321899e89d1d2de933d39"
+                    src="/restapi/v1/captchas/0905d3fc87c54925057321899e89d1d2de933d39">
+
+                <div class="captcha-change"><p>看不清？</p><a href="JavaScript:" ng-click="refreshCode()">换一张</a></div>
+                <p class="input-tip">请正确输入验证码</p>
+            </div>-->
+        </div>
+        <button class="ui-btn logreg-btn" ng-click="login()" ng-disabled="loginform.$invalid" disabled="disabled">登录
+        </button>
+    </form>
+</div>
+
+<script src="scripts/jquery-2.1.4.js"></script>
+<script src="scripts/lib.js"></script>
+<script src="scripts/tpl.js"></script>
+<script src="scripts/biz.js"></script>
+</body>
+</html>
