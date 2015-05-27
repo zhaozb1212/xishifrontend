@@ -18,5 +18,7 @@ angular.module("xs", [])
     }]);
 
 angular.module("xs", [])
-    .controller('/loginCtrl',[''])
+    .controller('loginCtrl', ['$rootScope', function (a) {
+
+    }]);
 
